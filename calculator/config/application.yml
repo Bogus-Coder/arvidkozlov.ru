@@ -1,0 +1,19 @@
+jsf:
+  primefaces:
+    theme: omega
+    
+application:
+
+server:
+  port: 18080
+  max-http-header-size: 20000
+  error:
+    whitelabel.enabled: true
+    include-exception: true
+    include-stacktrace: always
+  
+
+logging:
+  config: config/logback.xml
+  level.org.apache.tomcat: WARN
+  level.org.apache.catalina: WARN
