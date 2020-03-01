@@ -16,7 +16,7 @@ public class Results {
     // Количество километров в 1 занятии после коррекции 5 - 3 - 2
     private float ope2X_km,spe2X_km,sp2X_km;
 
-    protected StringBuilder getSb() {
+    StringBuilder getSb() {
         return sb;
     }
 
@@ -28,7 +28,7 @@ public class Results {
         return tos(ope2X_total_km);
     }
 
-    protected static String tos(Float f) {
+    static String tos(Float f) {
         return null == f ? null : String.format("%.1f", f);
     }
 
@@ -64,7 +64,7 @@ public class Results {
         return tos(sum2X_total);
     }
 
-    protected void setSum2X_total(float sum2X_total) {
+    void setSum2X_total(float sum2X_total) {
         this.sum2X_total = sum2X_total;
     }
 
@@ -173,7 +173,7 @@ public class Results {
     }
 
     private float ope2X,  spe2X,  sp2X;
-    protected void setRecalc(float ope2X, float spe2X, float sp2X) {
+    void setRecalc(float ope2X, float spe2X, float sp2X) {
         this.ope2X = ope2X;
         this.spe2X = spe2X;
         this.sp2X = sp2X;

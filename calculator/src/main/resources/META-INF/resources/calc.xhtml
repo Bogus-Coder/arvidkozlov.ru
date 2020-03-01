@@ -19,7 +19,7 @@
 
             <p:panelGrid>
                 <p:row styleClass="noborder">
-                    <p:column style="font-weight: bold;">Км в году</p:column>
+                    <p:column styleClass="bt">Км в году</p:column>
                     <p:column>
                         <p:inputNumber id="kmInYear" value="#{calcForm.data.kmInYear}" placeholder="Км в году"
                                        minValue="0" maxValue="1000000" decimalPlaces="0" thousandSeparator=""
@@ -29,7 +29,7 @@
                 </p:row>
 
                 <p:row styleClass="noborder">
-                    <p:column style="font-weight: bold;">Количество рабочих недель</p:column>
+                    <p:column styleClass="bt">Количество рабочих недель</p:column>
                     <p:column>
                         <p:inputNumber value="#{calcForm.data.txtKRN}" minValue="0" maxValue="152" decimalPlaces="1"
                                        required="true" requiredMessage="Укажите количество рабочих недель" />
@@ -37,7 +37,7 @@
                 </p:row>
 
                 <p:row styleClass="noborder">
-                    <p:column style="font-weight: bold;">Недели ОПЭ/СПЭ/СП</p:column>
+                    <p:column styleClass="bt">Недели ОПЭ/СПЭ/СП</p:column>
                     <p:column>
                         <p:inputNumber value="#{calcForm.data.txtOPE}" placeholder="ОПЭ" minValue="0" maxValue="152"
                                        decimalPlaces="1"
@@ -57,7 +57,7 @@
                 </p:row>
 
                 <p:row styleClass="noborder">
-                    <p:column style="font-weight: bold;">Количество Занятий в году</p:column>
+                    <p:column styleClass="bt">Количество Занятий в году</p:column>
                     <p:column>
                         <p:inputNumber value="#{calcForm.data.txtKZG}" minValue="0" maxValue="1000000" decimalPlaces="0"
                                        required="true" requiredMessage="Укажите количество занятий в году"/>
@@ -66,7 +66,7 @@
 
 
                 <p:row styleClass="noborder">
-                    <p:column style="font-weight: bold;">Доля от годового объма для 5-и зон интенсивности</p:column>
+                    <p:column styleClass="bt">Доля от годового объма для 5-и зон интенсивности</p:column>
                     <p:column> <p:inputNumber value="#{calcForm.data.txtZp1}" placeholder="1 зона" minValue="1"
                                               maxValue="100" decimalPlaces="0"/> </p:column>
                     <p:column> <p:inputNumber value="#{calcForm.data.txtZp2}" placeholder="2 зона" minValue="1"
@@ -80,39 +80,39 @@
                 </p:row>
 
                 <p:row styleClass="noborder">
-                    <p:column style="font-weight: bold;"></p:column>
-                    <p:column style="font-weight: bold;">ОПЭ</p:column>
-                    <p:column style="font-weight: bold;">СПЭ</p:column>
-                    <p:column style="font-weight: bold;">СП</p:column>
+                    <p:column styleClass="bt"></p:column>
+                    <p:column styleClass="bt">ОПЭ</p:column>
+                    <p:column styleClass="bt">СПЭ</p:column>
+                    <p:column styleClass="bt">СП</p:column>
                 </p:row>
 
                 <p:row styleClass="noborder">
-                    <p:column style="font-weight: bold; text-align: right;">2 зона</p:column>
-                    <p:column style="font-weight: bold;"><p:inputNumber value="#{calcForm.data.txtX2}" minValue="1"
+                    <p:column styleClass="bt tar">2 зона</p:column>
+                    <p:column styleClass="bt"><p:inputNumber value="#{calcForm.data.txtX2}" minValue="1"
                                                                         maxValue="100" decimalPlaces="0"/></p:column>
-                    <p:column style="font-weight: bold;"><p:inputNumber value="#{calcForm.data.txtX3}" minValue="1"
+                    <p:column styleClass="bt"><p:inputNumber value="#{calcForm.data.txtX3}" minValue="1"
                                                                         maxValue="100" decimalPlaces="0"/></p:column>
-                    <p:column style="font-weight: bold;"><p:inputNumber value="#{calcForm.data.txtX4}" minValue="1"
-                                                                        maxValue="100" decimalPlaces="0"/></p:column>
-                </p:row>
-
-                <p:row styleClass="noborder">
-                    <p:column style="font-weight: bold; text-align: right;">3 зона</p:column>
-                    <p:column style="font-weight: bold;"><p:inputNumber value="#{calcForm.data.txtY2}" minValue="1"
-                                                                        maxValue="100" decimalPlaces="0"/></p:column>
-                    <p:column style="font-weight: bold;"><p:inputNumber value="#{calcForm.data.txtY3}" minValue="1"
-                                                                        maxValue="100" decimalPlaces="0"/></p:column>
-                    <p:column style="font-weight: bold;"><p:inputNumber value="#{calcForm.data.txtY4}" minValue="1"
+                    <p:column styleClass="bt"><p:inputNumber value="#{calcForm.data.txtX4}" minValue="1"
                                                                         maxValue="100" decimalPlaces="0"/></p:column>
                 </p:row>
 
                 <p:row styleClass="noborder">
-                    <p:column style="font-weight: bold; text-align: right;">4 зона</p:column>
-                    <p:column style="font-weight: bold;"><p:inputNumber value="#{calcForm.data.txtZ2}" minValue="1"
+                    <p:column styleClass="bt tar">3 зона</p:column>
+                    <p:column styleClass="bt"><p:inputNumber value="#{calcForm.data.txtY2}" minValue="1"
                                                                         maxValue="100" decimalPlaces="0"/></p:column>
-                    <p:column style="font-weight: bold;"><p:inputNumber value="#{calcForm.data.txtZ3}" minValue="1"
+                    <p:column styleClass="bt"><p:inputNumber value="#{calcForm.data.txtY3}" minValue="1"
                                                                         maxValue="100" decimalPlaces="0"/></p:column>
-                    <p:column style="font-weight: bold;"><p:inputNumber value="#{calcForm.data.txtZ4}" minValue="1"
+                    <p:column styleClass="bt"><p:inputNumber value="#{calcForm.data.txtY4}" minValue="1"
+                                                                        maxValue="100" decimalPlaces="0"/></p:column>
+                </p:row>
+
+                <p:row styleClass="noborder">
+                    <p:column styleClass="bt tar">4 зона</p:column>
+                    <p:column styleClass="bt"><p:inputNumber value="#{calcForm.data.txtZ2}" minValue="1"
+                                                                        maxValue="100" decimalPlaces="0"/></p:column>
+                    <p:column styleClass="bt"><p:inputNumber value="#{calcForm.data.txtZ3}" minValue="1"
+                                                                        maxValue="100" decimalPlaces="0"/></p:column>
+                    <p:column styleClass="bt"><p:inputNumber value="#{calcForm.data.txtZ4}" minValue="1"
                                                                         maxValue="100" decimalPlaces="0"/></p:column>
                 </p:row>
             </p:panelGrid>
@@ -141,19 +141,19 @@
                         </p:row>
                     </f:facet>
                     <p:row>
-                        <p:column style="font-weight: bold; text-align: right;">ОПЭ</p:column>
-                        <p:column style="font-weight: bold;"><h:outputText value="#{calcForm.data.krn.x1}"/></p:column>
-                        <p:column style="font-weight: bold;"><h:outputText value="#{calcForm.data.zan.x1}"/></p:column>
+                        <p:column styleClass="bt tar">ОПЭ</p:column>
+                        <p:column styleClass="bt"><h:outputText value="#{calcForm.data.krn.x1}"/></p:column>
+                        <p:column styleClass="bt"><h:outputText value="#{calcForm.data.zan.x1}"/></p:column>
                     </p:row>
                     <p:row>
-                        <p:column style="font-weight: bold; text-align: right;">СПЭ</p:column>
-                        <p:column style="font-weight: bold;"><h:outputText value="#{calcForm.data.krn.x2}"/></p:column>
-                        <p:column style="font-weight: bold;"><h:outputText value="#{calcForm.data.zan.x2}"/></p:column>
+                        <p:column styleClass="bt tar">СПЭ</p:column>
+                        <p:column styleClass="bt"><h:outputText value="#{calcForm.data.krn.x2}"/></p:column>
+                        <p:column styleClass="bt"><h:outputText value="#{calcForm.data.zan.x2}"/></p:column>
                     </p:row>
                     <p:row>
-                        <p:column style="font-weight: bold; text-align: right;">СП</p:column>
-                        <p:column style="font-weight: bold;"><h:outputText value="#{calcForm.data.krn.x3}"/></p:column>
-                        <p:column style="font-weight: bold;"><h:outputText value="#{calcForm.data.zan.x3}"/></p:column>
+                        <p:column styleClass="bt tar">СП</p:column>
+                        <p:column styleClass="bt"><h:outputText value="#{calcForm.data.krn.x3}"/></p:column>
+                        <p:column styleClass="bt"><h:outputText value="#{calcForm.data.zan.x3}"/></p:column>
                     </p:row>
                 </p:panelGrid>
                 <h:outputText value="&lt;br/&gt;" escape="false"/>
@@ -175,12 +175,12 @@
                                   colspan="6">Количество километров проплываемых по зонам </p:column>
                     </p:row>
                     <p:row>
-                        <p:column style="font-weight: bold; text-align: right;"></p:column>
-                        <p:column style="font-weight: bold;"><h:outputText value="#{calcForm.data.znT.x1}"/></p:column>
-                        <p:column style="font-weight: bold;"><h:outputText value="#{calcForm.data.znT.x2}"/></p:column>
-                        <p:column style="font-weight: bold;"><h:outputText value="#{calcForm.data.znT.x3}"/></p:column>
-                        <p:column style="font-weight: bold;"><h:outputText value="#{calcForm.data.znT.x4}"/></p:column>
-                        <p:column style="font-weight: bold;"><h:outputText value="#{calcForm.data.znT.x5}"/></p:column>
+                        <p:column styleClass="bt tar"></p:column>
+                        <p:column styleClass="bt"><h:outputText value="#{calcForm.data.znT.x1}"/></p:column>
+                        <p:column styleClass="bt"><h:outputText value="#{calcForm.data.znT.x2}"/></p:column>
+                        <p:column styleClass="bt"><h:outputText value="#{calcForm.data.znT.x3}"/></p:column>
+                        <p:column styleClass="bt"><h:outputText value="#{calcForm.data.znT.x4}"/></p:column>
+                        <p:column styleClass="bt"><h:outputText value="#{calcForm.data.znT.x5}"/></p:column>
                     </p:row>
 
                     <p:row>
@@ -188,12 +188,12 @@
                                   colspan="6">Количество километров проплываемых за занятие </p:column>
                     </p:row>
                     <p:row>
-                        <p:column style="font-weight: bold; text-align: right;"></p:column>
-                        <p:column style="font-weight: bold;"><h:outputText value="#{calcForm.data.znMy.x1}"/></p:column>
-                        <p:column style="font-weight: bold;"><h:outputText value="#{calcForm.data.znMy.x2}"/></p:column>
-                        <p:column style="font-weight: bold;"><h:outputText value="#{calcForm.data.znMy.x3}"/></p:column>
-                        <p:column style="font-weight: bold;"><h:outputText value="#{calcForm.data.znMy.x4}"/></p:column>
-                        <p:column style="font-weight: bold;"><h:outputText value="#{calcForm.data.znMy.x5}"/></p:column>
+                        <p:column styleClass="bt tar"></p:column>
+                        <p:column styleClass="bt"><h:outputText value="#{calcForm.data.znMy.x1}"/></p:column>
+                        <p:column styleClass="bt"><h:outputText value="#{calcForm.data.znMy.x2}"/></p:column>
+                        <p:column styleClass="bt"><h:outputText value="#{calcForm.data.znMy.x3}"/></p:column>
+                        <p:column styleClass="bt"><h:outputText value="#{calcForm.data.znMy.x4}"/></p:column>
+                        <p:column styleClass="bt"><h:outputText value="#{calcForm.data.znMy.x5}"/></p:column>
                     </p:row>
 
                     <p:row>
@@ -207,51 +207,51 @@
                     </p:row>
 
                     <p:row>
-                        <p:column style="font-weight: bold; text-align: right;">ОПЭ</p:column>
-                        <p:column style="font-weight: bold;">
+                        <p:column styleClass="bt tar">ОПЭ</p:column>
+                        <p:column styleClass="bt">
                             <h:outputText value="#{calcForm.data.znOPE.x1}"/></p:column>
-                        <p:column style="font-weight: bold;">
+                        <p:column styleClass="bt">
                             <h:outputText value="#{calcForm.data.znOPE.x2}"/></p:column>
-                        <p:column style="font-weight: bold;">
+                        <p:column styleClass="bt">
                             <h:outputText value="#{calcForm.data.znOPE.x3}"/></p:column>
-                        <p:column style="font-weight: bold;">
+                        <p:column styleClass="bt">
                             <h:outputText value="#{calcForm.data.znOPE.x4}"/></p:column>
-                        <p:column style="font-weight: bold;">
+                        <p:column styleClass="bt">
                             <h:outputText value="#{calcForm.data.znOPE.x5}"/></p:column>
 
                     </p:row>
                     <p:row>
-                        <p:column style="font-weight: bold; text-align: right;">СПЭ</p:column>
-                        <p:column style="font-weight: bold;">
+                        <p:column styleClass="bt tar">СПЭ</p:column>
+                        <p:column styleClass="bt">
                             <h:outputText value="#{calcForm.data.znSPE.x1}"/></p:column>
-                        <p:column style="font-weight: bold;"><h:outputText
+                        <p:column styleClass="bt"><h:outputText
                                 value="#{calcForm.data.znSPE.x2}"/></p:column>
-                        <p:column style="font-weight: bold;"><h:outputText
+                        <p:column styleClass="bt"><h:outputText
                                 value="#{calcForm.data.znSPE.x3}"/></p:column>
-                        <p:column style="font-weight: bold;"><h:outputText
+                        <p:column styleClass="bt"><h:outputText
                                 value="#{calcForm.data.znSPE.x4}"/></p:column>
-                        <p:column style="font-weight: bold;"><h:outputText
+                        <p:column styleClass="bt"><h:outputText
                                 value="#{calcForm.data.znSPE.x5}"/></p:column>
                     </p:row>
                     <p:row>
-                        <p:column style="font-weight: bold; text-align: right;">СП</p:column>
-                        <p:column style="font-weight: bold;"><h:outputText value="#{calcForm.data.znSP.x1}"/></p:column>
-                        <p:column style="font-weight: bold;"><h:outputText value="#{calcForm.data.znSP.x2}"/></p:column>
-                        <p:column style="font-weight: bold;"><h:outputText value="#{calcForm.data.znSP.x3}"/></p:column>
-                        <p:column style="font-weight: bold;"><h:outputText value="#{calcForm.data.znSP.x4}"/></p:column>
-                        <p:column style="font-weight: bold;"><h:outputText value="#{calcForm.data.znSP.x5}"/></p:column>
+                        <p:column styleClass="bt tar">СП</p:column>
+                        <p:column styleClass="bt"><h:outputText value="#{calcForm.data.znSP.x1}"/></p:column>
+                        <p:column styleClass="bt"><h:outputText value="#{calcForm.data.znSP.x2}"/></p:column>
+                        <p:column styleClass="bt"><h:outputText value="#{calcForm.data.znSP.x3}"/></p:column>
+                        <p:column styleClass="bt"><h:outputText value="#{calcForm.data.znSP.x4}"/></p:column>
+                        <p:column styleClass="bt"><h:outputText value="#{calcForm.data.znSP.x5}"/></p:column>
                     </p:row>
                     <p:row>
-                        <p:column style="font-weight: bold; text-align: right;">Итого</p:column>
-                        <p:column style="font-weight: bold;"><h:outputText
+                        <p:column styleClass="bt tar">Итого</p:column>
+                        <p:column styleClass="bt"><h:outputText
                                 value="#{calcForm.data.itogo.x1}"/></p:column>
-                        <p:column style="font-weight: bold;"><h:outputText
+                        <p:column styleClass="bt"><h:outputText
                                 value="#{calcForm.data.itogo.x2}"/></p:column>
-                        <p:column style="font-weight: bold;"><h:outputText
+                        <p:column styleClass="bt"><h:outputText
                                 value="#{calcForm.data.itogo.x3}"/></p:column>
-                        <p:column style="font-weight: bold;"><h:outputText
+                        <p:column styleClass="bt"><h:outputText
                                 value="#{calcForm.data.itogo.x4}"/></p:column>
-                        <p:column style="font-weight: bold;"><h:outputText
+                        <p:column styleClass="bt"><h:outputText
                                 value="#{calcForm.data.itogo.x5}"/></p:column>
                     </p:row>
                     <p:row>
@@ -260,38 +260,38 @@
                         </p:column>
                     </p:row>
                     <p:row>
-                        <p:column style="font-weight: bold; text-align: right;">ОПЭ</p:column>
-                        <p:column style="font-weight: bold;"></p:column>
-                        <p:column style="font-weight: bold;">
+                        <p:column styleClass="bt tar">ОПЭ</p:column>
+                        <p:column styleClass="bt"></p:column>
+                        <p:column styleClass="bt">
                             <h:outputText value="#{calcForm.data.r2.ope2Min}"/></p:column>
-                        <p:column style="font-weight: bold;">
+                        <p:column styleClass="bt">
                             <h:outputText value="#{calcForm.data.r3.ope2Min}"/></p:column>
-                        <p:column style="font-weight: bold;">
+                        <p:column styleClass="bt">
                             <h:outputText value="#{calcForm.data.r4.ope2Min}"/></p:column>
-                        <p:column style="font-weight: bold;"></p:column>
+                        <p:column styleClass="bt"></p:column>
                     </p:row>
                     <p:row>
-                        <p:column style="font-weight: bold; text-align: right;">СПЭ</p:column>
-                        <p:column style="font-weight: bold;"></p:column>
-                        <p:column style="font-weight: bold;">
+                        <p:column styleClass="bt tar">СПЭ</p:column>
+                        <p:column styleClass="bt"></p:column>
+                        <p:column styleClass="bt">
                             <h:outputText value="#{calcForm.data.r2.spe2Min}"/></p:column>
-                        <p:column style="font-weight: bold;">
+                        <p:column styleClass="bt">
                             <h:outputText value="#{calcForm.data.r3.spe2Min}"/></p:column>
-                        <p:column style="font-weight: bold;">
+                        <p:column styleClass="bt">
                             <h:outputText value="#{calcForm.data.r4.spe2Min}"/></p:column>
-                        <p:column style="font-weight: bold;"></p:column>
+                        <p:column styleClass="bt"></p:column>
                     </p:row>
 
                     <p:row>
-                        <p:column style="font-weight: bold; text-align: right;">СП</p:column>
-                        <p:column style="font-weight: bold;"></p:column>
-                        <p:column style="font-weight: bold;">
+                        <p:column styleClass="bt tar">СП</p:column>
+                        <p:column styleClass="bt"></p:column>
+                        <p:column styleClass="bt">
                             <h:outputText value="#{calcForm.data.r2.sp2Min}"/></p:column>
-                        <p:column style="font-weight: bold;">
+                        <p:column styleClass="bt">
                             <h:outputText value="#{calcForm.data.r3.sp2Min}"/></p:column>
-                        <p:column style="font-weight: bold;">
+                        <p:column styleClass="bt">
                             <h:outputText value="#{calcForm.data.r4.sp2Min}"/></p:column>
-                        <p:column style="font-weight: bold;"></p:column>
+                        <p:column styleClass="bt"></p:column>
                     </p:row>
 
 
@@ -301,37 +301,37 @@
                         </p:column>
                     </p:row>
                     <p:row>
-                        <p:column style="font-weight: bold; text-align: right;">ОПЭ</p:column>
-                        <p:column style="font-weight: bold;"></p:column>
-                        <p:column style="font-weight: bold;">
+                        <p:column styleClass="bt tar">ОПЭ</p:column>
+                        <p:column styleClass="bt"></p:column>
+                        <p:column styleClass="bt">
                             <h:outputText value="#{calcForm.data.r2.ope2X}"/></p:column>
-                        <p:column style="font-weight: bold;">
+                        <p:column styleClass="bt">
                             <h:outputText value="#{calcForm.data.r3.ope2X}"/></p:column>
-                        <p:column style="font-weight: bold;">
+                        <p:column styleClass="bt">
                             <h:outputText value="#{calcForm.data.r4.ope2X}"/></p:column>
-                        <p:column style="font-weight: bold;"></p:column>
+                        <p:column styleClass="bt"></p:column>
                     </p:row>
                     <p:row>
-                        <p:column style="font-weight: bold; text-align: right;">CПЭ</p:column>
-                        <p:column style="font-weight: bold;"></p:column>
-                        <p:column style="font-weight: bold;">
+                        <p:column styleClass="bt tar">CПЭ</p:column>
+                        <p:column styleClass="bt"></p:column>
+                        <p:column styleClass="bt">
                             <h:outputText value="#{calcForm.data.r2.spe2X}"/></p:column>
-                        <p:column style="font-weight: bold;">
+                        <p:column styleClass="bt">
                             <h:outputText value="#{calcForm.data.r3.spe2X}"/></p:column>
-                        <p:column style="font-weight: bold;">
+                        <p:column styleClass="bt">
                             <h:outputText value="#{calcForm.data.r4.spe2X}"/></p:column>
-                        <p:column style="font-weight: bold;"></p:column>
+                        <p:column styleClass="bt"></p:column>
                     </p:row>
                     <p:row>
-                        <p:column style="font-weight: bold; text-align: right;">СП</p:column>
-                        <p:column style="font-weight: bold;"></p:column>
-                        <p:column style="font-weight: bold;">
+                        <p:column styleClass="bt tar">СП</p:column>
+                        <p:column styleClass="bt"></p:column>
+                        <p:column styleClass="bt">
                             <h:outputText value="#{calcForm.data.r2.sp2X}"/></p:column>
-                        <p:column style="font-weight: bold;">
+                        <p:column styleClass="bt">
                             <h:outputText value="#{calcForm.data.r3.sp2X}"/></p:column>
-                        <p:column style="font-weight: bold;">
+                        <p:column styleClass="bt">
                             <h:outputText value="#{calcForm.data.r4.sp2X}"/></p:column>
-                        <p:column style="font-weight: bold;"></p:column>
+                        <p:column styleClass="bt"></p:column>
                     </p:row>
 
                     <p:row>
@@ -340,37 +340,37 @@
                         </p:column>
                     </p:row>
                     <p:row>
-                        <p:column style="font-weight: bold; text-align: right;">ОПЭ</p:column>
-                        <p:column style="font-weight: bold;"></p:column>
-                        <p:column style="font-weight: bold;">
+                        <p:column styleClass="bt tar">ОПЭ</p:column>
+                        <p:column styleClass="bt"></p:column>
+                        <p:column styleClass="bt">
                             <h:outputText value="#{calcForm.data.r2.ope2_min}"/></p:column>
-                        <p:column style="font-weight: bold;">
+                        <p:column styleClass="bt">
                             <h:outputText value="#{calcForm.data.r3.ope2_min}"/></p:column>
-                        <p:column style="font-weight: bold;">
+                        <p:column styleClass="bt">
                             <h:outputText value="#{calcForm.data.r4.ope2_min}"/></p:column>
-                        <p:column style="font-weight: bold;"></p:column>
+                        <p:column styleClass="bt"></p:column>
                     </p:row>
                     <p:row>
-                        <p:column style="font-weight: bold; text-align: right;">CПЭ</p:column>
-                        <p:column style="font-weight: bold;"></p:column>
-                        <p:column style="font-weight: bold;">
+                        <p:column styleClass="bt tar">CПЭ</p:column>
+                        <p:column styleClass="bt"></p:column>
+                        <p:column styleClass="bt">
                             <h:outputText value="#{calcForm.data.r2.spe2_min}"/></p:column>
-                        <p:column style="font-weight: bold;">
+                        <p:column styleClass="bt">
                             <h:outputText value="#{calcForm.data.r3.spe2_min}"/></p:column>
-                        <p:column style="font-weight: bold;">
+                        <p:column styleClass="bt">
                             <h:outputText value="#{calcForm.data.r4.spe2_min}"/></p:column>
-                        <p:column style="font-weight: bold;"></p:column>
+                        <p:column styleClass="bt"></p:column>
                     </p:row>
                     <p:row>
-                        <p:column style="font-weight: bold; text-align: right;">СП</p:column>
-                        <p:column style="font-weight: bold;"></p:column>
-                        <p:column style="font-weight: bold;">
+                        <p:column styleClass="bt tar">СП</p:column>
+                        <p:column styleClass="bt"></p:column>
+                        <p:column styleClass="bt">
                             <h:outputText value="#{calcForm.data.r2.sp2_min}"/></p:column>
-                        <p:column style="font-weight: bold;">
+                        <p:column styleClass="bt">
                             <h:outputText value="#{calcForm.data.r3.sp2_min}"/></p:column>
-                        <p:column style="font-weight: bold;">
+                        <p:column styleClass="bt">
                             <h:outputText value="#{calcForm.data.r4.sp2_min}"/></p:column>
-                        <p:column style="font-weight: bold;"></p:column>
+                        <p:column styleClass="bt"></p:column>
                     </p:row>
 
 
@@ -380,37 +380,37 @@
                         </p:column>
                     </p:row>
                     <p:row>
-                        <p:column style="font-weight: bold; text-align: right;">ОПЭ</p:column>
-                        <p:column style="font-weight: bold;"></p:column>
-                        <p:column style="font-weight: bold;">
+                        <p:column styleClass="bt tar">ОПЭ</p:column>
+                        <p:column styleClass="bt"></p:column>
+                        <p:column styleClass="bt">
                             <h:outputText value="#{calcForm.data.r2.ope2_km}"/></p:column>
-                        <p:column style="font-weight: bold;">
+                        <p:column styleClass="bt">
                             <h:outputText value="#{calcForm.data.r3.ope2_km}"/></p:column>
-                        <p:column style="font-weight: bold;">
+                        <p:column styleClass="bt">
                             <h:outputText value="#{calcForm.data.r4.ope2_km}"/></p:column>
-                        <p:column style="font-weight: bold;"></p:column>
+                        <p:column styleClass="bt"></p:column>
                     </p:row>
                     <p:row>
-                        <p:column style="font-weight: bold; text-align: right;">CПЭ</p:column>
-                        <p:column style="font-weight: bold;"></p:column>
-                        <p:column style="font-weight: bold;">
+                        <p:column styleClass="bt tar">CПЭ</p:column>
+                        <p:column styleClass="bt"></p:column>
+                        <p:column styleClass="bt">
                             <h:outputText value="#{calcForm.data.r2.spe2_km}"/></p:column>
-                        <p:column style="font-weight: bold;">
+                        <p:column styleClass="bt">
                             <h:outputText value="#{calcForm.data.r3.spe2_km}"/></p:column>
-                        <p:column style="font-weight: bold;">
+                        <p:column styleClass="bt">
                             <h:outputText value="#{calcForm.data.r4.spe2_km}"/></p:column>
-                        <p:column style="font-weight: bold;"></p:column>
+                        <p:column styleClass="bt"></p:column>
                     </p:row>
                     <p:row>
-                        <p:column style="font-weight: bold; text-align: right;">СП</p:column>
-                        <p:column style="font-weight: bold;"></p:column>
-                        <p:column style="font-weight: bold;">
+                        <p:column styleClass="bt tar">СП</p:column>
+                        <p:column styleClass="bt"></p:column>
+                        <p:column styleClass="bt">
                             <h:outputText value="#{calcForm.data.r2.sp2_km}"/></p:column>
-                        <p:column style="font-weight: bold;">
+                        <p:column styleClass="bt">
                             <h:outputText value="#{calcForm.data.r3.sp2_km}"/></p:column>
-                        <p:column style="font-weight: bold;">
+                        <p:column styleClass="bt">
                             <h:outputText value="#{calcForm.data.r4.sp2_km}"/></p:column>
-                        <p:column style="font-weight: bold;"></p:column>
+                        <p:column styleClass="bt"></p:column>
                     </p:row>
 
 
@@ -420,37 +420,37 @@
                         </p:column>
                     </p:row>
                     <p:row>
-                        <p:column style="font-weight: bold; text-align: right;">ОПЭ</p:column>
-                        <p:column style="font-weight: bold;"><h:outputText value="#{calcForm.data.znMy.x1}"/></p:column>
-                        <p:column style="font-weight: bold;">
+                        <p:column styleClass="bt tar">ОПЭ</p:column>
+                        <p:column styleClass="bt"><h:outputText value="#{calcForm.data.znMy.x1}"/></p:column>
+                        <p:column styleClass="bt">
                             <h:outputText value="#{calcForm.data.r2.ope2X_km}"/></p:column>
-                        <p:column style="font-weight: bold;">
+                        <p:column styleClass="bt">
                             <h:outputText value="#{calcForm.data.r3.ope2X_km}"/></p:column>
-                        <p:column style="font-weight: bold;">
+                        <p:column styleClass="bt">
                             <h:outputText value="#{calcForm.data.r4.ope2X_km}"/></p:column>
-                        <p:column style="font-weight: bold;"><h:outputText value="#{calcForm.data.znMy.x5}"/></p:column>
+                        <p:column styleClass="bt"><h:outputText value="#{calcForm.data.znMy.x5}"/></p:column>
                     </p:row>
                     <p:row>
-                        <p:column style="font-weight: bold; text-align: right;">CПЭ</p:column>
-                        <p:column style="font-weight: bold;"><h:outputText value="#{calcForm.data.znMy.x1}"/></p:column>
-                        <p:column style="font-weight: bold;">
+                        <p:column styleClass="bt tar">CПЭ</p:column>
+                        <p:column styleClass="bt"><h:outputText value="#{calcForm.data.znMy.x1}"/></p:column>
+                        <p:column styleClass="bt">
                             <h:outputText value="#{calcForm.data.r2.spe2X_km}"/></p:column>
-                        <p:column style="font-weight: bold;">
+                        <p:column styleClass="bt">
                             <h:outputText value="#{calcForm.data.r3.spe2X_km}"/></p:column>
-                        <p:column style="font-weight: bold;">
+                        <p:column styleClass="bt">
                             <h:outputText value="#{calcForm.data.r4.spe2X_km}"/></p:column>
-                        <p:column style="font-weight: bold;"><h:outputText value="#{calcForm.data.znMy.x5}"/></p:column>
+                        <p:column styleClass="bt"><h:outputText value="#{calcForm.data.znMy.x5}"/></p:column>
                     </p:row>
                     <p:row>
-                        <p:column style="font-weight: bold; text-align: right;">СП</p:column>
-                        <p:column style="font-weight: bold;"><h:outputText value="#{calcForm.data.znMy.x1}"/></p:column>
-                        <p:column style="font-weight: bold;">
+                        <p:column styleClass="bt tar">СП</p:column>
+                        <p:column styleClass="bt"><h:outputText value="#{calcForm.data.znMy.x1}"/></p:column>
+                        <p:column styleClass="bt">
                             <h:outputText value="#{calcForm.data.r2.sp2X_km}"/></p:column>
-                        <p:column style="font-weight: bold;">
+                        <p:column styleClass="bt">
                             <h:outputText value="#{calcForm.data.r3.sp2X_km}"/></p:column>
-                        <p:column style="font-weight: bold;">
+                        <p:column styleClass="bt">
                             <h:outputText value="#{calcForm.data.r4.sp2X_km}"/></p:column>
-                        <p:column style="font-weight: bold;"><h:outputText value="#{calcForm.data.znMy.x5}"/></p:column>
+                        <p:column styleClass="bt"><h:outputText value="#{calcForm.data.znMy.x5}"/></p:column>
                     </p:row>
 
 
@@ -460,59 +460,59 @@
                         </p:column>
                     </p:row>
                     <p:row>
-                        <p:column style="font-weight: bold; text-align: right;">ОПЭ</p:column>
-                        <p:column style="font-weight: bold;"></p:column>
-                        <p:column style="font-weight: bold;">
+                        <p:column styleClass="bt tar">ОПЭ</p:column>
+                        <p:column styleClass="bt"></p:column>
+                        <p:column styleClass="bt">
                             <h:outputText value="#{calcForm.data.r2.ope2X_total_km}"/></p:column>
-                        <p:column style="font-weight: bold;">
+                        <p:column styleClass="bt">
                             <h:outputText value="#{calcForm.data.r3.ope2X_total_km}"/></p:column>
-                        <p:column style="font-weight: bold;">
+                        <p:column styleClass="bt">
                             <h:outputText value="#{calcForm.data.r4.ope2X_total_km}"/></p:column>
-                        <p:column style="font-weight: bold;"></p:column>
+                        <p:column styleClass="bt"></p:column>
                     </p:row>
                     <p:row>
-                        <p:column style="font-weight: bold; text-align: right;">CПЭ</p:column>
-                        <p:column style="font-weight: bold;"></p:column>
-                        <p:column style="font-weight: bold;">
+                        <p:column styleClass="bt tar">CПЭ</p:column>
+                        <p:column styleClass="bt"></p:column>
+                        <p:column styleClass="bt">
                             <h:outputText value="#{calcForm.data.r2.spe2X_total_km}"/></p:column>
-                        <p:column style="font-weight: bold;">
+                        <p:column styleClass="bt">
                             <h:outputText value="#{calcForm.data.r3.spe2X_total_km}"/></p:column>
-                        <p:column style="font-weight: bold;">
+                        <p:column styleClass="bt">
                             <h:outputText value="#{calcForm.data.r4.spe2X_total_km}"/></p:column>
-                        <p:column style="font-weight: bold;"></p:column>
+                        <p:column styleClass="bt"></p:column>
                     </p:row>
                     <p:row>
-                        <p:column style="font-weight: bold; text-align: right;">СП</p:column>
-                        <p:column style="font-weight: bold;"></p:column>
-                        <p:column style="font-weight: bold;">
+                        <p:column styleClass="bt tar">СП</p:column>
+                        <p:column styleClass="bt"></p:column>
+                        <p:column styleClass="bt">
                             <h:outputText value="#{calcForm.data.r2.sp2X_total_km}"/></p:column>
-                        <p:column style="font-weight: bold;">
+                        <p:column styleClass="bt">
                             <h:outputText value="#{calcForm.data.r3.sp2X_total_km}"/></p:column>
-                        <p:column style="font-weight: bold;">
+                        <p:column styleClass="bt">
                             <h:outputText value="#{calcForm.data.r4.sp2X_total_km}"/></p:column>
-                        <p:column style="font-weight: bold;"></p:column>
+                        <p:column styleClass="bt"></p:column>
                     </p:row>
                     <p:row>
-                        <p:column style="font-weight: bold; text-align: right;">Итого</p:column>
-                        <p:column style="font-weight: bold;"></p:column>
-                        <p:column style="font-weight: bold;">
+                        <p:column styleClass="bt tar">Итого</p:column>
+                        <p:column styleClass="bt"></p:column>
+                        <p:column styleClass="bt">
                             <h:outputText value="#{calcForm.data.r2.sum2X_total_km}"/></p:column>
-                        <p:column style="font-weight: bold;">
+                        <p:column styleClass="bt">
                             <h:outputText value="#{calcForm.data.r3.sum2X_total_km}"/></p:column>
-                        <p:column style="font-weight: bold;">
+                        <p:column styleClass="bt">
                             <h:outputText value="#{calcForm.data.r4.sum2X_total_km}"/></p:column>
-                        <p:column style="font-weight: bold;"></p:column>
+                        <p:column styleClass="bt"></p:column>
                     </p:row>
                     <p:row>
-                        <p:column style="font-weight: bold; text-align: right;">Разница</p:column>
-                        <p:column style="font-weight: bold;"></p:column>
-                        <p:column style="font-weight: bold;">
+                        <p:column styleClass="bt tar">Разница</p:column>
+                        <p:column styleClass="bt"></p:column>
+                        <p:column styleClass="bt">
                             <h:outputText value="#{calcForm.data.r2.diff2X_total}"/></p:column>
-                        <p:column style="font-weight: bold;">
+                        <p:column styleClass="bt">
                             <h:outputText value="#{calcForm.data.r3.diff2X_total}"/></p:column>
-                        <p:column style="font-weight: bold;">
+                        <p:column styleClass="bt">
                             <h:outputText value="#{calcForm.data.r4.diff2X_total}"/></p:column>
-                        <p:column style="font-weight: bold;"></p:column>
+                        <p:column styleClass="bt"></p:column>
                     </p:row>
 
 

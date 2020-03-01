@@ -23,7 +23,7 @@ public class DataContainer {
         return x5;
     }
 
-    protected void fill(Float j1, Float j2, Float j3, Float j4, Float j5) {
+    void fill(Float j1, Float j2, Float j3, Float j4, Float j5) {
         x1 = Results.tos(j1);
         x2 = Results.tos(j2);
         x3 = Results.tos(j3);

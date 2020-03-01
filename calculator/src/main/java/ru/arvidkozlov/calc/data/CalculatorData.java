@@ -34,14 +34,14 @@ public class CalculatorData {
     private String txtZ4 = "6";
 
     private Results r2, r3, r4;
-    private DataContainer itogo = new DataContainer();
-    private DataContainer znT = new DataContainer();
-    private DataContainer znMy = new DataContainer();
-    private DataContainer krn = new DataContainer();
-    private DataContainer zan = new DataContainer();
-    private DataContainer znOPE = new DataContainer();
-    private DataContainer znSPE = new DataContainer();
-    private DataContainer znSP = new DataContainer();
+    private final DataContainer itogo = new DataContainer();
+    private final DataContainer znT = new DataContainer();
+    private final DataContainer znMy = new DataContainer();
+    private final DataContainer krn = new DataContainer();
+    private final DataContainer zan = new DataContainer();
+    private final DataContainer znOPE = new DataContainer();
+    private final DataContainer znSPE = new DataContainer();
+    private final DataContainer znSP = new DataContainer();
 
     public DataContainer getItogo() {
         return itogo;
@@ -270,26 +270,26 @@ public class CalculatorData {
         int KZG, KZN;
 
         // чтение входных данных в переменные
-        kmInYear_ = BigDecimal.valueOf(Double.valueOf(kmInYear));
-        KZG = Integer.valueOf(txtKZG);
-        OPE = BigDecimal.valueOf(Float.valueOf(txtOPE));
-        SPE = BigDecimal.valueOf(Float.valueOf(txtSPE));
-        SP = BigDecimal.valueOf(Float.valueOf(txtSP));
-        Zp1 =  BigDecimal.valueOf(Float.valueOf(txtZp1));
-        Zp2 =  BigDecimal.valueOf(Float.valueOf(txtZp2));
-        Zp3 =  BigDecimal.valueOf(Float.valueOf(txtZp3));
-        Zp4 =  BigDecimal.valueOf(Float.valueOf(txtZp4));
-        Zp5 =  BigDecimal.valueOf(Float.valueOf(txtZp5));
-        X2 = Integer.valueOf(txtX2);
-        Y2 = Integer.valueOf(txtY2);
-        Z2 = Integer.valueOf(txtZ2);
-        X3 = Integer.valueOf(txtX3);
-        Y3 = Integer.valueOf(txtY3);
-        Z3 = Integer.valueOf(txtZ3);
-        X4 = Integer.valueOf(txtX4);
-        Y4 = Integer.valueOf(txtY4);
-        Z4 = Integer.valueOf(txtZ4);
-        KRN = BigDecimal.valueOf(Float.valueOf(txtKRN));
+        kmInYear_ = BigDecimal.valueOf(Double.parseDouble(kmInYear));
+        KZG = Integer.parseInt(txtKZG);
+        OPE = BigDecimal.valueOf(Float.parseFloat(txtOPE));
+        SPE = BigDecimal.valueOf(Float.parseFloat(txtSPE));
+        SP = BigDecimal.valueOf(Float.parseFloat(txtSP));
+        Zp1 =  BigDecimal.valueOf(Float.parseFloat(txtZp1));
+        Zp2 =  BigDecimal.valueOf(Float.parseFloat(txtZp2));
+        Zp3 =  BigDecimal.valueOf(Float.parseFloat(txtZp3));
+        Zp4 =  BigDecimal.valueOf(Float.parseFloat(txtZp4));
+        Zp5 =  BigDecimal.valueOf(Float.parseFloat(txtZp5));
+        X2 = Integer.parseInt(txtX2);
+        Y2 = Integer.parseInt(txtY2);
+        Z2 = Integer.parseInt(txtZ2);
+        X3 = Integer.parseInt(txtX3);
+        Y3 = Integer.parseInt(txtY3);
+        Z3 = Integer.parseInt(txtZ3);
+        X4 = Integer.parseInt(txtX4);
+        Y4 = Integer.parseInt(txtY4);
+        Z4 = Integer.parseInt(txtZ4);
+        KRN = BigDecimal.valueOf(Float.parseFloat(txtKRN));
 
         // validate
         if (KRN.compareTo(OPE.add(SPE).add(SP)) < 0){
@@ -421,8 +421,8 @@ public class CalculatorData {
         r.getSb().append(newLine).append("********************************************************************************");
         r.getSb().append(newLine).append("********************************************************************************");
         r.getSb().append(newLine).append("Перерасчет по минимальному из ").append(cd.getZone()).append(" зоны");
-        float min = cd.getOpe2() > cd.getSpe2() ? cd.getSpe2() : cd.getOpe2();
-        min = min > cd.getSp2() ? cd.getSp2() : min;
+        float min = Math.min(cd.getOpe2(), cd.getSpe2());
+        min = Math.min(min, cd.getSp2());
         r.getSb().append(newLine).append("Минимум из ").append(cd.getZone()).append(" зоны : ").append(String.format("%.1fкм", min));
 
         r.getSb().append(newLine).append(newLine).append("Осталось км после вычета минимального");
@@ -511,11 +511,11 @@ public class CalculatorData {
     }
 
     public void preCalculate() {
-        float Zp1 = Float.valueOf(txtZp1);
-        float Zp2 = Float.valueOf(txtZp2);
-        float Zp3 = Float.valueOf(txtZp3);
-        float Zp4 = Float.valueOf(txtZp4);
-        float Zp5 = Float.valueOf(txtZp5);
+        float Zp1 = Float.parseFloat(txtZp1);
+        float Zp2 = Float.parseFloat(txtZp2);
+        float Zp3 = Float.parseFloat(txtZp3);
+        float Zp4 = Float.parseFloat(txtZp4);
+        float Zp5 = Float.parseFloat(txtZp5);
 
         Zp5 = 100.0f - Zp1 - Zp2 - Zp3 - Zp4;
         txtZp5 = String.format("%.0f", Zp5);

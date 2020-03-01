@@ -17,7 +17,4 @@ public class Calculator {
     this.data = data;
   }
 
-  public String showGreeting() {
-    return "Hello  !";
-  }
 }

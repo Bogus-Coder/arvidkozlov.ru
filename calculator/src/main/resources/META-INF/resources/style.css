@@ -1,7 +1,15 @@
-.noborder{
+.noborder {
     border: 1px solid #ffffff;
 }
 
 .ui-growl {
-    left:20px;
+    left: 20px;
+}
+
+.bt {
+    font-weight: bold;
+}
+
+.tar {
+    text-align: right;
 }
