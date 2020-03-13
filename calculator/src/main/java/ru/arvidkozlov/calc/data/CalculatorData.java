@@ -39,6 +39,7 @@ public class CalculatorData {
     private final DataContainer znMy = new DataContainer();
     private final DataContainer krn = new DataContainer();
     private final DataContainer zan = new DataContainer();
+    private final DataContainer zn = new DataContainer();
     private final DataContainer znOPE = new DataContainer();
     private final DataContainer znSPE = new DataContainer();
     private final DataContainer znSP = new DataContainer();
@@ -69,6 +70,10 @@ public class CalculatorData {
 
     public DataContainer getZan() {
         return zan;
+    }
+
+    public DataContainer getZn() {
+        return zn;
     }
 
     public DataContainer getKrn() {
@@ -321,6 +326,7 @@ public class CalculatorData {
         KZN = (KZG / KRN.intValue());
         sb.append(newLine).append(newLine).append("Оределение количества занятий в неделю");
         sb.append(newLine).append(String.format("%d / %d = %d", KZG, KRN.intValue(), KZN));
+        zn.fill((float)KZN,null,null,null,null);
 
 
         float z1o = BigDecimal.valueOf(J1 / KZG).setScale(1, RoundingMode.CEILING).floatValue();

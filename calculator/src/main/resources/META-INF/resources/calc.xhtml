@@ -158,26 +158,32 @@
                             <p:column></p:column>
                             <p:column>Количество рабочих недель</p:column>
                             <p:column>Количество тренировочных занятий</p:column>
+                            <p:column>Количество тренировочных занятий в неделю</p:column>
                         </p:row>
                     </f:facet>
                     <p:row>
                         <p:column styleClass="bt tar">ОПЭ</p:column>
                         <p:column styleClass="bt"><h:outputText value="#{calcForm.data.krn.x1}"/></p:column>
                         <p:column styleClass="bt"><h:outputText value="#{calcForm.data.zan.x1}"/></p:column>
+                        <p:column styleClass="bt"><h:outputText value="#{calcForm.data.zn.x1}"/></p:column>
                     </p:row>
                     <p:row>
                         <p:column styleClass="bt tar">СПЭ</p:column>
                         <p:column styleClass="bt"><h:outputText value="#{calcForm.data.krn.x2}"/></p:column>
                         <p:column styleClass="bt"><h:outputText value="#{calcForm.data.zan.x2}"/></p:column>
+                        <p:column styleClass="bt"><h:outputText value="#{calcForm.data.zn.x1}"/></p:column>
                     </p:row>
                     <p:row>
                         <p:column styleClass="bt tar">СП</p:column>
                         <p:column styleClass="bt"><h:outputText value="#{calcForm.data.krn.x3}"/></p:column>
                         <p:column styleClass="bt"><h:outputText value="#{calcForm.data.zan.x3}"/></p:column>
+                        <p:column styleClass="bt"><h:outputText value="#{calcForm.data.zn.x1}"/></p:column>
                     </p:row>
                 </p:panelGrid>
                 <h:outputText value="&lt;br/&gt;" escape="false"/>
                 <h:outputText value="&lt;br/&gt;" escape="false"/>
+
+
                 <p:panelGrid>
                     <f:facet name="header">
                         <p:row>
@@ -192,7 +198,7 @@
                     </f:facet>
                     <p:row>
                         <p:column styleClass="ui-widget-header"
-                                  colspan="6">Количество километров проплываемых по зонам </p:column>
+                                  colspan="6">Количество километров проплываемых по зонам интенсивности</p:column>
                     </p:row>
                     <p:row>
                         <p:column styleClass="bt tar"></p:column>
@@ -205,7 +211,7 @@
 
                     <p:row>
                         <p:column styleClass="ui-widget-header"
-                                  colspan="6">Количество километров проплываемых за занятие </p:column>
+                                  colspan="6">Количество километров проплываемых за занятие по зонам интенсивности</p:column>
                     </p:row>
                     <p:row>
                         <p:column styleClass="bt tar"></p:column>
@@ -215,15 +221,10 @@
                         <p:column styleClass="bt"><h:outputText value="#{calcForm.data.znMy.x4}"/></p:column>
                         <p:column styleClass="bt"><h:outputText value="#{calcForm.data.znMy.x5}"/></p:column>
                     </p:row>
-
-                    <p:row>
-                        <p:column styleClass="ui-widget-header"
-                                  colspan="6">Расчет цикла</p:column>
-                    </p:row>
                     <p:row>
 
                         <p:column styleClass="ui-widget-header"
-                                  colspan="6">Количество километров проплываемых по зонам исходя из среднегодовых значений</p:column>
+                                  colspan="6">Количество километров проплываемых по этапам в среднем в году</p:column>
                     </p:row>
 
                     <p:row>
@@ -275,164 +276,9 @@
                                 value="#{calcForm.data.itogo.x5}"/></p:column>
                     </p:row>
                     <p:row>
-                        <p:column colspan="6" styleClass="ui-widget-header">
-                            Количество километров без наименьшего объема в каждом цикле
-                        </p:column>
+                        <p:column styleClass="ui-widget-header"
+                                  colspan="6">Результаты перерасчета</p:column>
                     </p:row>
-                    <p:row>
-                        <p:column styleClass="bt tar">ОПЭ</p:column>
-                        <p:column styleClass="bt"></p:column>
-                        <p:column styleClass="bt">
-                            <h:outputText value="#{calcForm.data.r2.ope2Min}"/></p:column>
-                        <p:column styleClass="bt">
-                            <h:outputText value="#{calcForm.data.r3.ope2Min}"/></p:column>
-                        <p:column styleClass="bt">
-                            <h:outputText value="#{calcForm.data.r4.ope2Min}"/></p:column>
-                        <p:column styleClass="bt"></p:column>
-                    </p:row>
-                    <p:row>
-                        <p:column styleClass="bt tar">СПЭ</p:column>
-                        <p:column styleClass="bt"></p:column>
-                        <p:column styleClass="bt">
-                            <h:outputText value="#{calcForm.data.r2.spe2Min}"/></p:column>
-                        <p:column styleClass="bt">
-                            <h:outputText value="#{calcForm.data.r3.spe2Min}"/></p:column>
-                        <p:column styleClass="bt">
-                            <h:outputText value="#{calcForm.data.r4.spe2Min}"/></p:column>
-                        <p:column styleClass="bt"></p:column>
-                    </p:row>
-
-                    <p:row>
-                        <p:column styleClass="bt tar">СП</p:column>
-                        <p:column styleClass="bt"></p:column>
-                        <p:column styleClass="bt">
-                            <h:outputText value="#{calcForm.data.r2.sp2Min}"/></p:column>
-                        <p:column styleClass="bt">
-                            <h:outputText value="#{calcForm.data.r3.sp2Min}"/></p:column>
-                        <p:column styleClass="bt">
-                            <h:outputText value="#{calcForm.data.r4.sp2Min}"/></p:column>
-                        <p:column styleClass="bt"></p:column>
-                    </p:row>
-
-
-                    <p:row>
-                        <p:column colspan="6" styleClass="ui-widget-header">
-                            Перерасчет
-                        </p:column>
-                    </p:row>
-                    <p:row>
-                        <p:column styleClass="bt tar">ОПЭ</p:column>
-                        <p:column styleClass="bt"></p:column>
-                        <p:column styleClass="bt">
-                            <h:outputText value="#{calcForm.data.r2.ope2X}"/></p:column>
-                        <p:column styleClass="bt">
-                            <h:outputText value="#{calcForm.data.r3.ope2X}"/></p:column>
-                        <p:column styleClass="bt">
-                            <h:outputText value="#{calcForm.data.r4.ope2X}"/></p:column>
-                        <p:column styleClass="bt"></p:column>
-                    </p:row>
-                    <p:row>
-                        <p:column styleClass="bt tar">CПЭ</p:column>
-                        <p:column styleClass="bt"></p:column>
-                        <p:column styleClass="bt">
-                            <h:outputText value="#{calcForm.data.r2.spe2X}"/></p:column>
-                        <p:column styleClass="bt">
-                            <h:outputText value="#{calcForm.data.r3.spe2X}"/></p:column>
-                        <p:column styleClass="bt">
-                            <h:outputText value="#{calcForm.data.r4.spe2X}"/></p:column>
-                        <p:column styleClass="bt"></p:column>
-                    </p:row>
-                    <p:row>
-                        <p:column styleClass="bt tar">СП</p:column>
-                        <p:column styleClass="bt"></p:column>
-                        <p:column styleClass="bt">
-                            <h:outputText value="#{calcForm.data.r2.sp2X}"/></p:column>
-                        <p:column styleClass="bt">
-                            <h:outputText value="#{calcForm.data.r3.sp2X}"/></p:column>
-                        <p:column styleClass="bt">
-                            <h:outputText value="#{calcForm.data.r4.sp2X}"/></p:column>
-                        <p:column styleClass="bt"></p:column>
-                    </p:row>
-
-                    <p:row>
-                        <p:column colspan="6" styleClass="ui-widget-header">
-                            Количество километров после пересчета по нименьшему объему
-                        </p:column>
-                    </p:row>
-                    <p:row>
-                        <p:column styleClass="bt tar">ОПЭ</p:column>
-                        <p:column styleClass="bt"></p:column>
-                        <p:column styleClass="bt">
-                            <h:outputText value="#{calcForm.data.r2.ope2_min}"/></p:column>
-                        <p:column styleClass="bt">
-                            <h:outputText value="#{calcForm.data.r3.ope2_min}"/></p:column>
-                        <p:column styleClass="bt">
-                            <h:outputText value="#{calcForm.data.r4.ope2_min}"/></p:column>
-                        <p:column styleClass="bt"></p:column>
-                    </p:row>
-                    <p:row>
-                        <p:column styleClass="bt tar">CПЭ</p:column>
-                        <p:column styleClass="bt"></p:column>
-                        <p:column styleClass="bt">
-                            <h:outputText value="#{calcForm.data.r2.spe2_min}"/></p:column>
-                        <p:column styleClass="bt">
-                            <h:outputText value="#{calcForm.data.r3.spe2_min}"/></p:column>
-                        <p:column styleClass="bt">
-                            <h:outputText value="#{calcForm.data.r4.spe2_min}"/></p:column>
-                        <p:column styleClass="bt"></p:column>
-                    </p:row>
-                    <p:row>
-                        <p:column styleClass="bt tar">СП</p:column>
-                        <p:column styleClass="bt"></p:column>
-                        <p:column styleClass="bt">
-                            <h:outputText value="#{calcForm.data.r2.sp2_min}"/></p:column>
-                        <p:column styleClass="bt">
-                            <h:outputText value="#{calcForm.data.r3.sp2_min}"/></p:column>
-                        <p:column styleClass="bt">
-                            <h:outputText value="#{calcForm.data.r4.sp2_min}"/></p:column>
-                        <p:column styleClass="bt"></p:column>
-                    </p:row>
-
-
-                    <p:row>
-                        <p:column colspan="6" styleClass="ui-widget-header">
-                            Количество километров в 1 занятии после пересчета
-                        </p:column>
-                    </p:row>
-                    <p:row>
-                        <p:column styleClass="bt tar">ОПЭ</p:column>
-                        <p:column styleClass="bt"></p:column>
-                        <p:column styleClass="bt">
-                            <h:outputText value="#{calcForm.data.r2.ope2_km}"/></p:column>
-                        <p:column styleClass="bt">
-                            <h:outputText value="#{calcForm.data.r3.ope2_km}"/></p:column>
-                        <p:column styleClass="bt">
-                            <h:outputText value="#{calcForm.data.r4.ope2_km}"/></p:column>
-                        <p:column styleClass="bt"></p:column>
-                    </p:row>
-                    <p:row>
-                        <p:column styleClass="bt tar">CПЭ</p:column>
-                        <p:column styleClass="bt"></p:column>
-                        <p:column styleClass="bt">
-                            <h:outputText value="#{calcForm.data.r2.spe2_km}"/></p:column>
-                        <p:column styleClass="bt">
-                            <h:outputText value="#{calcForm.data.r3.spe2_km}"/></p:column>
-                        <p:column styleClass="bt">
-                            <h:outputText value="#{calcForm.data.r4.spe2_km}"/></p:column>
-                        <p:column styleClass="bt"></p:column>
-                    </p:row>
-                    <p:row>
-                        <p:column styleClass="bt tar">СП</p:column>
-                        <p:column styleClass="bt"></p:column>
-                        <p:column styleClass="bt">
-                            <h:outputText value="#{calcForm.data.r2.sp2_km}"/></p:column>
-                        <p:column styleClass="bt">
-                            <h:outputText value="#{calcForm.data.r3.sp2_km}"/></p:column>
-                        <p:column styleClass="bt">
-                            <h:outputText value="#{calcForm.data.r4.sp2_km}"/></p:column>
-                        <p:column styleClass="bt"></p:column>
-                    </p:row>
-
 
                     <p:row>
                         <p:column colspan="6" styleClass="ui-widget-header">
